@@ -1,26 +1,21 @@
 **CYPRESS**
 
-It is a NODE js based testing framework which works in an asynchronous manner.
-Overcomes all the drawbacks of Selenium and other web automation techniques
-It can be utilised in 2 forms - an app and a cloud
-It supported by 2 lang- TS, JS
+1.It is a NODE js based testing framework which works in an asynchronous manner.
+2.Overcomes all the drawbacks of Selenium and other web automation techniques
+3.It can be utilised in 2 forms - an app and a cloud
+4.It supported by 2 lang- TS, JS
 
 **HOW is CYPRESS different from SELENIUM/cucumber**
--> It comes fully baked- have integrated libraries of test, reporting, snapshot, video, browser driver, dependencies, debugging , cross browser testing, assertions, action unlike in SELENIUM where everything has to be gathered first to make a framework - ALL IN ONE
--> It is faster as here a webdriver does not have to interact with the application(web-server) but both - scripts & browser are on browser iframe which interacts with node js websocket - execution saves time.
--> Installation saves time.
--> selenium has external testreports, snapshots, video libraries.
--> selenium does not have auto reloading and debugging.
+1. It comes fully baked- have integrated libraries of test, reporting, snapshot, video, browser driver, dependencies, debugging , cross browser testing, assertions, action unlike in SELENIUM where everything has to be gathered first to make a framework - ALL IN ONE
+2. It is faster as here a webdriver does not have to interact with the application(web-server) but both - scripts & browser are on browser iframe which interacts with node js websocket - execution saves time.
+3. Installation saves time.
+4. selenium has external testreports, snapshots, video libraries.
+5. selenium does not have auto reloading and debugging.
 
 **ARCHITECTURE** 
 
-**Selenium: **
-
-Language binding JAVA → within→ IDE → browser drivers → act on web application ( a lot of requests )
-
-**Cypress:
-**
-NODe JS PROXY —----> http request /responses ( websocket)----> browser scripts iframe + execution ifarme  ( everything on same machine and no language /OS binding )
+Selenium: - Language binding JAVA → within→ IDE → browser drivers → act on web application ( a lot of requests )
+Cypress:- NODe JS PROXY —----> http request /responses ( websocket)----> browser scripts iframe + execution ifarme  ( everything on same machine and no language /OS binding )
 
 
 **LIMITATION of cypress**
@@ -42,17 +37,17 @@ NODe JS PROXY —----> http request /responses ( websocket)----> browser scripts
 9. support MOCHA BDD.
     
 **INSTALLATION**
-->Download node based on OS version ( along with path settings )
-->Install any IDE ( along with path settings )
-->Install CYPRESS in project -> npm init
+1. Download node based on OS version ( along with path settings )
+2. Install any IDE ( along with path settings )
+3. Install CYPRESS in project -> npm init
 npm install cypress –save –dev
 
 **OPEN APP**
   npx cypress open
 
 **MODES of test scripts development**
-->E2E test
-->Component test- used by dev, for unit and integration test.
+1. E2E test
+2. Component test- used by dev, for unit and integration test.
 
 **TEST CASE FORMAT**
 nameOFtest.spec.cy.js
@@ -73,22 +68,22 @@ describe(‘name of sceanario’,() => {
 
 **WEB ELEMENTS OPERATIONS**
 
-//launching url
+1. launching url
 
 cy.visit('https://www.saucedemo.com/');     
 
-//get element by class, selector, or jquery
+2. get element by class, selector, or jquery
 
 cy.get('[data-test="username"]').type("standard_user");
 cy.get('[data-test="password"]').type("secret_sauce");
 cy.get('[data-test="login-button"]').click();     
 
-//Assertions
+3. Assertions
 
 expect(true).to.equal(false);
 cy.title().should('eq',"Swag Labs");
 
-//we need to use "only" to include test 
+4. we need to use "only" to include test 
 it.only('dropdown',() => {
 
 **ERRORS/EXCEPTIONS**
@@ -96,13 +91,13 @@ Visiting an untrusted website has been preevnted
 
 **Commands for CLI**
 
-//headless 
+1. headless 
 npx cypress run -b edge --spec C:\Users\savig\OneDrive\Desktop\Cypress_\cypress\e2e\1-getting-started\SauceDemo.cy.js
 
-//run all scripts
+2. run all scripts
  .\node_modules\.bin\cypress run  
 
- //specific suite
+3. specific suite
  .\node_modules\.bin\cypress run --spec .\cypress\integration\demo.spec.js
 
 **CONFIG FILE**
