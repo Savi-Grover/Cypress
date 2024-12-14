@@ -14,8 +14,8 @@
 
 **ARCHITECTURE** 
 
-Selenium: - Language binding JAVA → within→ IDE → browser drivers → act on web application ( a lot of requests )
-Cypress:- NODe JS PROXY —----> http request /responses ( websocket)----> browser scripts iframe + execution ifarme  ( everything on same machine and no language /OS binding )
+1. Selenium: - Language binding JAVA → within→ IDE → browser drivers → act on web application ( a lot of requests )
+2. Cypress:- NODe JS PROXY —----> http request /responses ( websocket)----> browser scripts iframe + execution ifarme  ( everything on same machine and no language /OS binding )
 
 
 **LIMITATION of cypress**
@@ -50,13 +50,18 @@ npm install cypress –save –dev
 1. E2E test
 2. Component test- used by dev, for unit and integration test.
 
+**add below in config file under e2e**
+  testIsolation: false,   
+
+When "testIsolation: true" is set in Cypress configuration, it means that before each test runs, Cypress will completely reset the browser context, effectively isolating each test by clearing the DOM state, cookies, localStorage, and sessionStorage in all domains, ensuring that no test is affected by the state left behind from previous tests; this is considered a best practice for reliable and independent test execution.
+  
 **TEST CASE FORMAT**
 nameOFtest.spec.cy.js
 
 **BUNDLED LIBRARIES OF CYPRESS**
 
-MOCHA- is a testing framework which works in an asynchronous, serialized manner. ALso catched test exceptions/errors.
-CHAI- TDD, BDD Assertion library of node js
+MOCHA- is a testing framework which works in an asynchronous, serialized manner. ALso catched test exceptions/errors. ( describe(), it() )
+CHAI- TDD, BDD Assertion library of node js  ( expect, should)
 
 **WRITING TEST CASES**
 
@@ -127,7 +132,20 @@ module.exports = defineConfig({
 
 });
 
+**stop auto-rerun for test**
+why it is needed - when we changed even one line, the whole script reloads and run all instructions, all tests again, this causes much delay in debugging.
+we have to add in- in config file under e2e
 
+watchForFileChanges: false
+
+**stop XHR and FETCH logs while running the script** in support folder- e2e js file
+const app=window.top;
+if(!app.document.head.querySelector("[data-hide-command-log-request]")){
+const style = app.document.createElement("style");
+style.innerHTML=".command-namerequest, .command-name-xhr { dispaly:none }";
+style.setAttribute("data-hide-command-log-request","");
+app.document.head.appendChild(style);
+}
 
 QUERYING
 Get
