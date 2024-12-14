@@ -157,6 +157,17 @@ style.setAttribute("data-hide-command-log-request","");
 app.document.head.appendChild(style);
 }
 
+**Extension**
+
+Cypress Extension for vs code
+
+**Xpath plugin**
+1. install - npm install -D cypress-xpath
+2. Add: require('cypress-xpath')         - in e2e js file
+3. Start using in scripts : cy.xpath('locator')
+
+
+
 QUERYING
 Get
 Contains
