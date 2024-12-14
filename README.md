@@ -166,7 +166,12 @@ Cypress Extension for vs code
 2. Add: require('cypress-xpath')         - in e2e js file
 3. Start using in scripts : cy.xpath('locator')
 
-
+**iFrame**
+1. install- npm install -D cypress-iframe
+2. add import in spec file: import 'cypress-iframe'
+3. Load the frame, perform action :
+cy.frameLoaded('#buttonframe'); //frame id or name
+cy.iframe().contains('Downloads').click();  //click on downloads link on html page
 
 QUERYING
 Get
