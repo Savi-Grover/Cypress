@@ -173,7 +173,33 @@ Cypress Extension for vs code
 cy.frameLoaded('#buttonframe'); //frame id or name
 cy.iframe().contains('Downloads').click();  //click on downloads link on html page
 
-QUERYING
+**Hooks**
+1. They are special code blocks used for the purpose of reusability - and common utilities functions
+2. Total 4 hooks- before, after, beforeEach, AfterEach
+3. used when we are doing operations with precondition, database, excel ( before testcases ) or clean up, close db, close excel, post conditions (after testcases)
+
+**Skip test**
+ it.skip('test desc',()=>{
+ })
+
+**Repeat and Retry** - used to check stability , flakyness by running multiple times
+1. Repeat Test-
+Cypress._.times(2,(k)=>{nameoftest})
+
+**Run multiple test files together** - keep file path together
+npx cypress run -b edge --spec C:\Users\savig\OneDrive\Desktop\Cypress_\cypress\e2e\1-getting-started\SauceDemo.cy.js C:\Users\savig\OneDrive\Desktop\Cypress_\cypress\e2e\1-getting-started\assertions.cy.js
+
+**Test REPORTS**
+Mochawesome Report Generation Steps:
+1. Install: npm i --save-dev cypress-mochawesome-reporter
+2. add below lines cy config.json file
+   reporter:'cypress-mochawesome-reporter/register';
+   require('cypress-mochawesome-reporter/plugin')(on);  //inside e2e settings
+3. Add below line in support> e2e.js 
+   import 'cypress-mochawesome-reporter/register';
+4.Run test: find reports in : reports>html>index.html
+
+**QUERYING**
 Get
 Contains
 Within
