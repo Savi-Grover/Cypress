@@ -72,6 +72,15 @@ describe(‘name of sceanario’,() => {
 })
 })
 
+**IntelliSense and Intelligent code completion** - to see functions and command for chaining
+
+1. Add in js spec file
+/// <reference types="Cypress"/>
+2. create jsconfig.json at root, add below code in there
+   {
+   "include":["./node_modules/cypress", "cypress", "cypress/**/*.js"]
+   }
+   
 **WEB ELEMENTS OPERATIONS**
 
 1. launching url
