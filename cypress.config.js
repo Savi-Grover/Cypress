@@ -12,6 +12,7 @@ module.exports = defineConfig({
 
     //mandatory to load elements and not give white screen after browser vi
     testIsolation: false,   
+    watchForFileChanges: false
 
 
     
