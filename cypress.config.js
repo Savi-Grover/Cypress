@@ -4,7 +4,6 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({ 
   defaultCommandTimeout: 8000,   //default time set for each element to load
   pageLoadTimeout:10000, 
-  //reporter:'cypress-mochawesome-reporter/register'
   reporter: 'cypress-mochawesome-reporter/register',
 
   e2e: 
@@ -19,7 +18,6 @@ module.exports = defineConfig({
     watchForFileChanges: false
     
     }
-
 });
 
 

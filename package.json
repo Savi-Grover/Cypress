@@ -12,6 +12,9 @@
     "cypress": "^13.16.1",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^6.2.1",
+"mochawesome-merge": "^4.2.0",
+"mochawesome-report-generator": "5.1.0"
   }
 }
