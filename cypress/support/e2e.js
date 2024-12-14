@@ -1,4 +1,6 @@
 import 'cypress-mochawesome-reporter/register';
+
+import addContext from 'mochawesome/addContext';
 // ***********************************************************
 // This example support/e2e.js is processed and
 // loaded automatically before your test files.
