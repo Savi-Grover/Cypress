@@ -207,6 +207,7 @@ Mochawesome Report Generation Steps:
 
 **Video Record**
 We need to set video flag to true in cypress confihuration file
+1. Video:true,
    
 
 **QUERYING**
