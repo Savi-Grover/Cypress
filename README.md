@@ -41,6 +41,7 @@ Cypress:- NODe JS PROXY —----> http request /responses ( websocket)----> brows
 2. Install any IDE ( along with path settings )
 3. Install CYPRESS in project -> npm init
 npm install cypress –save –dev
+4. install cypree cli tool- npm install cypress -g
 
 **OPEN APP**
   npx cypress open
@@ -91,7 +92,7 @@ Visiting an untrusted website has been preevnted
 
 **Commands for CLI**
 
-1. headless 
+1. headless ( default headless )
 npx cypress run -b edge --spec C:\Users\savig\OneDrive\Desktop\Cypress_\cypress\e2e\1-getting-started\SauceDemo.cy.js
 
 2. run all scripts
@@ -99,6 +100,12 @@ npx cypress run -b edge --spec C:\Users\savig\OneDrive\Desktop\Cypress_\cypress\
 
 3. specific suite
  .\node_modules\.bin\cypress run --spec .\cypress\integration\demo.spec.js
+
+4. to open browser test runner from CLI
+   npx run cypress:open
+
+5. headed mode
+npx cypress run -b edge --headed --spec C:\Users\savig\OneDrive\Desktop\Cypress_\cypress\e2e\1-getting-started\SauceDemo.cy.js
 
 **CONFIG FILE**
 
