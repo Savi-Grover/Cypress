@@ -205,6 +205,8 @@ Mochawesome Report Generation Steps:
 3. command - npm cypress run -b chrome --spec --RELATIVE_PATH_OF_FOLDER*cy.js
    npx cypress run --browser chrome --spec --"cypress\e2e\1-getting-started\smokeTest\*.cy.js"
 
+**Video Record**
+We need to set video flag to true in cypress confihuration file
    
 
 **QUERYING**
