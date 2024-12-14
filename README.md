@@ -148,6 +148,7 @@ we have to add in- in config file under e2e
 watchForFileChanges: false
 
 **stop XHR and FETCH logs while running the script** in support folder- e2e js file
+
 const app=window.top;
 if(!app.document.head.querySelector("[data-hide-command-log-request]")){
 const style = app.document.createElement("style");
