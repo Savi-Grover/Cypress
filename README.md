@@ -199,6 +199,14 @@ Mochawesome Report Generation Steps:
    import 'cypress-mochawesome-reporter/register';
 4.Run test: find reports in : reports>html>index.html
 
+**Group tests/ run multiple tests**
+1. start by making a folder with cy.js extension
+2. keep test or spec files under it to run
+3. command - npm cypress run -b chrome --spec --RELATIVE_PATH_OF_FOLDER*cy.js
+   npx cypress run --browser chrome --spec --"cypress\e2e\1-getting-started\smokeTest\*.cy.js"
+
+   
+
 **QUERYING**
 Get
 Contains
