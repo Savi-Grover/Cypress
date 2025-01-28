@@ -51,11 +51,36 @@ npm install cypress --save-dev
 2. Component test- used by dev, for unit and integration test.
 
 **Default project structure**
+Cypress has a well-defined folder structure that helps organize test code, configuration, plugins, and other related files. Here’s an explanation of the typical folder structure you’ll encounter in a Cypress project:
 
+1. cypress/ Directory: This is the root directory where Cypress-related files and folders are stored.
+2. cypress/e2e/ Directory: This directory is where you should place your test files. Cypress will automatically detect and run tests from this folder. Test files typically have .spec.js or .test.js file extension.
+3. cypress/fixtures/ Directory (Optional): You can use this directory to store static data or fixture files that your tests might need, such as JSON, CSV, or text files.
+4. cypress/plugins/ Directory (Optional): If you need to extend Cypress’s functionality, you can create custom plugins in this directory. For example, you can write custom commands or modify Cypress behavior through plugins.
+5. cypress/support/ Directory (Optional):
+This directory is used for storing various support files. You can include custom commands, global variables, or other scripts that you want to load before running your tests.
+The support folder contains two files:
+a) commands.js (Optional):
+
+commands.js is a JavaScript file where you can define custom Cypress commands. These custom commands encapsulate frequently used sequences of actions, making your test code more concise and maintainable.
+For example, you might create a custom command to log in to your application, which can be reused across multiple test files.
+Custom commands can be defined using the Cypress.Commands.add() method.
+For example, here’s a simplified structure of a “support” folder:Copy cod
+
+support/
+  ├── commands.js
+  ├── e2e.js
+  ├── customUtilities.js
+  ├── customPlugins.js
+  └── otherCustomSupportFile.js
+Each of these files can contribute to enhancing your Cypress test suite by adding custom commands, setup/teardown logic, utilities, and more.
+
+b) e2e.js (Optional): e2e.js is another JavaScript file where you can include global setup and teardown code for your Cypress tests. This file runs before and after all test files.
+You can use this file to perform tasks like setting up test data, initializing the application, or cleaning up resources.
+6. cypress.config.js File: This configuration file allows you to set global settings for Cypress, such as the base URL, browser options, and other configurations. It’s a JSON file located in the project’s root directory.
 
 **add below in config file under e2e**
   testIsolation: false,   
-
 When "testIsolation: true" is set in Cypress configuration, it means that before each test runs, Cypress will completely reset the browser context, effectively isolating each test by clearing the DOM state, cookies, localStorage, and sessionStorage in all domains, ensuring that no test is affected by the state left behind from previous tests; this is considered a best practice for reliable and independent test execution.
   
 **TEST CASE FORMAT**
