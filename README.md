@@ -1,21 +1,21 @@
 **CYPRESS**
 
-1.It is a NODE js based testing framework which works in an asynchronous manner.
-2.Overcomes all the drawbacks of Selenium and other web automation techniques
-3.It can be utilised in 2 forms - an app and a cloud
-4.It supported by 2 lang- TS, JS
+1. It is a NODE js based testing framework which works in an asynchronous manner.
+2. Overcomes all the drawbacks of Selenium and other web automation techniques(enviornment /IDE setup ; installations ; maven dependencies)
+3. It can be utilised in 2 forms - an app and a cloud
+4. It supported by 2 languages- TypeScript, JavaScript
 
 **HOW is CYPRESS different from SELENIUM/cucumber**
-1. It comes fully baked- have integrated libraries of test, reporting, snapshot, video, browser driver, dependencies, debugging , cross browser testing, assertions, action unlike in SELENIUM where everything has to be gathered first to make a framework - ALL IN ONE
+1. It comes fully baked- have integrated libraries of test, reporting, snapshot, video, browser driver, dependencies, debugging , cross browser testing, assertions, action unlike in SELENIUM where different libraries has to be gathered first to make a framework - ALL IN ONE
 2. It is faster as here a webdriver does not have to interact with the application(web-server) but both - scripts & browser are on browser iframe which interacts with node js websocket - execution saves time.
 3. Installation saves time.
 4. selenium has external testreports, snapshots, video libraries.
-5. selenium does not have auto reloading and debugging.
+5. selenium does not have auto reloading and real-time debugging.
 
 **ARCHITECTURE** 
 
-1. Selenium: - Language binding JAVA → within→ IDE → browser drivers → act on web application ( a lot of requests )
-2. Cypress:- NODe JS PROXY —----> http request /responses ( websocket)----> browser scripts iframe + execution ifarme  ( everything on same machine and no language /OS binding )
+1. Selenium: Client Server Architecture with Language binding( JAVA) → within→ IDE →interacts with browser drivers → act on web application ( test scripts are api requests )
+2. Cypress:- NODE JS PROXY —----> http request /responses ( websocket)----> browser scripting iframe + execution iframe ( everything on same machine and no language /OS binding )
 
 
 **LIMITATION of cypress**
@@ -23,7 +23,7 @@
 2. no mobile app automation
 3. no safari and opera support
 4. cannot use more that 1 browser/window/tab at time.
-5. cannot use XPATH without an external pluggin.
+5. cannot use XPATH locator without an external pluggin.
 
 **ADVANTAGES OF Cypress**
 1. fast, reliable beacause direct control on browser.
@@ -40,7 +40,7 @@
 1. Download node based on OS version ( along with path settings )
 2. Install any IDE ( along with path settings )
 3. Install CYPRESS in project -> npm init
-npm install cypress –save –dev
+npm install cypress --save-dev
 4. install cypree cli tool- npm install cypress -g
 
 **OPEN APP**
@@ -49,6 +49,9 @@ npm install cypress –save –dev
 **MODES of test scripts development**
 1. E2E test
 2. Component test- used by dev, for unit and integration test.
+
+**Default project structure**
+
 
 **add below in config file under e2e**
   testIsolation: false,   
