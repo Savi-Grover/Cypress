@@ -24,6 +24,7 @@
 3. no safari and opera support
 4. cannot use more that 1 browser/window/tab at time.
 5. cannot use XPATH locator without an external pluggin.
+6. limited iframe test support.
 
 **ADVANTAGES OF Cypress**
 1. fast, reliable beacause direct control on browser.
